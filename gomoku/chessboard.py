@@ -1,6 +1,7 @@
-class Chessboard():
-    def show_board(self):
-        print("here is board!")
+class Chessboard:
 
-    def get_winner(self):
-        print("get_ winner is called.")
+    def __init__(self):
+        pass
+
+    def init_board(self):
+        pass

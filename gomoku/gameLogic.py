@@ -1,3 +1,10 @@
 class gameLogic():
-    def show_game(self):
-        print("here is game logic!")
+
+    def __init__(self):
+       pass
+
+    def find_winner(self, board_matrix):
+       pass
+
+    def place_stone(self, player, location):
+        pass
