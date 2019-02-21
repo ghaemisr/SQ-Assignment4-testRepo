@@ -6,10 +6,13 @@ from gomoku.chessboard import Chessboard
 
 class TestWinner(unittest.TestCase):
     def test_score(self):
-        fakeboard= Chessboard()
-        fakeboard.get_winner = MagicMock(return_value="White")
+        # fakeboard= Chessboard()
+        # fakeboard.get_winner = MagicMock(return_value="White")
         sb = Scoreboard()
-        self.assertEqual(sb.score(fakeboard.get_winner()),"White")
+        # self.assertEqual(sb.score(fakeboard.get_winner()),"White")
+
+        self.assertEqual(sb.score("White"), "White")
+
         # self.assertEqual(scoreboard.score.assert_called_once_with('sara'), 'here is game scoreboard! sara')
         # scoreboard = Scoreboard()
         # scoreboard.score = MagicMock()
