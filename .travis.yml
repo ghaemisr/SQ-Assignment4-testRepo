@@ -12,3 +12,5 @@ before_install:
 script:
   - python ./test/scoreboardTest.py
   - python ./test/mainGameTest.py
+
+CODECOV_TOKEN: "51af92ba-ad39-4c25-a64f-44e4e1a947a6"
