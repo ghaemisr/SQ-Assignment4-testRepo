@@ -5,6 +5,7 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install codecov
 
 before_install:
   - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
@@ -12,6 +13,7 @@ before_install:
 script:
   - python ./test/scoreboardTest.py
   - python ./test/mainGameTest.py
+  - coverage run ./test/scoreboardTest.py
 
 after_success:
- - bash <(curl -s https://codecov.io/bash)
+  - codecov
