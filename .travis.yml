@@ -13,7 +13,12 @@ before_install:
 script:
   - python ./test/scoreboardTest.py
   - python ./test/mainGameTest.py
+  - python ./test/chessboardTest.py
+  - python ./test/gameLogicTest.py
   - coverage run ./test/scoreboardTest.py
+  - coverage run ./test/mainGameTest.py
+  - coverage run ./test/chessboardTest.py
+  - coverage run ./test/gameLogicTest.py
 
 after_success:
   - codecov
