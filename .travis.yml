@@ -12,11 +12,12 @@ before_install:
   
 script:
   - coverage run ./test/scoreboardTest.py
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
   - coverage run ./test/mainGameTest.py
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
   - coverage run ./test/chessboardTest.py
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
   - coverage run ./test/gameLogicTest.py
+  - bash <(curl -s https://codecov.io/bash)
 
   
