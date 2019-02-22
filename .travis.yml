@@ -11,10 +11,7 @@ before_install:
   - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
   
 script:
-  - coverage run ./test/scoreboardTest.py
-  - coverage run ./test/mainGameTest.py
-  - coverage run ./test/chessboardTest.py
-  - coverage run ./test/gameLogicTest.py
+  - coverage run ./test/allTests.py
 
 after_success:
   - codecov

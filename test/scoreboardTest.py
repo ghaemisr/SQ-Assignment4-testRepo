@@ -1,7 +1,7 @@
 import unittest
 
 
-class TestWinner(unittest.TestCase):
+class TestScoreboard(unittest.TestCase):
 
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
