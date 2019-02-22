@@ -4,6 +4,10 @@ class Scoreboard:
         self.result = {'black': 0, 'white': 0, 'tie': 0}
 
     def set_new_result(self, winner):
+        """
+        :param winner: the winner is an input
+        :return: There is no return for this function
+        """
         if winner == 'black':
             self.result['black'] += 1
         elif winner == 'white':
@@ -14,4 +18,7 @@ class Scoreboard:
             raise ValueError('Could not understand ' + winner + ' as a winner')
 
     def reset_scoreboard(self):
+        """
+        :return: there is no return
+        """
         self.result = {'black': 0, 'white': 0, 'tie': 0}

@@ -40,6 +40,9 @@ class TestResetScoreboard(unittest.TestCase):
 
     def test_black_won(self):
         expected_result = {'black': 0, 'white': 0, 'tie': 0}
+        self.sb.set_new_result('white')
+        self.sb.set_new_result('black')
+        self.sb.set_new_result('tie')
         self.sb.reset_scoreboard()
         self.assertEqual(self.sb.result, expected_result)
 
