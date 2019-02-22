@@ -28,9 +28,9 @@ class TestSetNewResult(unittest.TestCase):
         self.assertEqual(prev_score + 1, self.sb.result['tie'])
 
     def test_unexpected_input(self):
-        prev_score = self.sb.result['Sara']
-        self.sb.set_new_result('Sara')
-        self.assertEqual(prev_score + 1, self.sb.result['Sara'])
+        with self.assertRaises(ValueError) as context:
+            self.sb.set_new_result('Sara')
+        self.assertTrue('Could not understand Sara as a winner' in str(context.exception))
 
 
 class TestResetScoreboard(unittest.TestCase):

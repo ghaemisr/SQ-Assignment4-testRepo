@@ -2,10 +2,16 @@ class Scoreboard:
 
     def __init__(self):
         self.result = {'black': 0, 'white': 0, 'tie': 0}
-        pass
 
     def set_new_result(self, winner):
-        pass
+        if winner == 'black':
+            self.result['black'] += 1
+        elif winner == 'white':
+            self.result['white'] += 1
+        elif winner == 'tie':
+            self.result['tie'] += 1
+        else:
+            raise ValueError('Could not understand ' + winner + ' as a winner')
 
     def reset_scoreboard(self):
-        pass
+        self.result = {'black': 0, 'white': 0, 'tie': 0}
