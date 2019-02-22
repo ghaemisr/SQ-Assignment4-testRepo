@@ -10,14 +10,8 @@ install:
 before_install:
   - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
   
-script:
-  - coverage run ./test/scoreboardTest.py
-  - bash <(curl -s https://codecov.io/bash)
-  - coverage run ./test/mainGameTest.py
-  - bash <(curl -s https://codecov.io/bash)
-  - coverage run ./test/chessboardTest.py
-  - bash <(curl -s https://codecov.io/bash)
-  - coverage run ./test/gameLogicTest.py
-  - bash <(curl -s https://codecov.io/bash)
+script: 
+  - coverage run ./test/allTests.py
 
-  
+after_success:
+  - codecov
