@@ -1,14 +1,31 @@
 import unittest
+from gomoku.chessboard import Chessboard
 
 
 class TestChessboard(unittest.TestCase):
+    def setUp(self):
+        self.cb = Chessboard
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+    def test_init_chessboard(self):
+        self.cb.init_chessboard()
+        self.assertEqual("Black", self.cb.currentPlayer)
+        self.assertEqual(19, len(self.cb.chessboardMatrix))
+        for i in range(19):
+            self.assertEqual(19, len(self.cb.chessboardMatrix[i]))
+            self.assertEqual(0, sum(self.cb.chessboardMatrix[i]))
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
+    def test_get_current_player(self):
+        self.cb.get_current_player()
+        self.assertEqual("White", self.cb.currentPlayer)
+
+    def test_move(self):
+        self.cb.move((0, 0), "White")
+        self.assertEqual(2, self.cb.chessboardMatrix[0][0])
+        self.cb.move((18, 18), "Black")
+        self.assertEqual(1, self.cb.chessboardMatrix[18][18])
+        self.assertRaises(self.cb.IllegalMove,self.cb.move,(0,0),"White")
+        self.assertRaises(self.cb.IllegalMove,self.cb.move,(19,0),"White")
+        self.assertRaises(self.cb.IllegalMove,self.cb.move,(10,10),"None")
 
 if __name__ == '__main__':
     unittest.main()
