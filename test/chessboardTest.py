@@ -28,5 +28,6 @@ class TestChessboard(unittest.TestCase):
         self.assertRaises(self.cb.IllegalCoordinateException,self.cb.move,19,0,"White")
         self.assertRaises(self.cb.IllegalPlayerException,self.cb.move,10,10,"None")
 
+
 if __name__ == '__main__':
     unittest.main()

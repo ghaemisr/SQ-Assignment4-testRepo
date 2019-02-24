@@ -7,6 +7,9 @@ import numpy as np
 import re
 import sys
 
+from gomoku.chessboard import Chessboard
+from gomoku.gameLogic import GameLogic
+from gomoku.scoreboard import Scoreboard
 
 class Main:
     def __init__(self):
