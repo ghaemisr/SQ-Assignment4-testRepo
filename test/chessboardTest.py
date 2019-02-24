@@ -1,7 +1,6 @@
 import unittest
 from gomoku.chessboard import Chessboard
 
-
 class TestChessboard(unittest.TestCase):
     def setUp(self):
         self.cb = Chessboard
