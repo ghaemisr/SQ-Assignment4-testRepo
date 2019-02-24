@@ -14,9 +14,9 @@ class TestChessboard(unittest.TestCase):
             self.assertEqual(0, sum(self.cb.chessboardMatrix[i]))
 
     def test_get_current_player(self):
-        self.cb.currentPlayer = "White"
-        self.assertEqual("White", self.cb.get_current_player())
+        self.cb.current_layer = "White"
         self.assertEqual("Black", self.cb.get_current_player())
+        self.assertEqual("White", self.cb.get_current_player())
 
     def test_move(self):
         self.cb.init_chessboard()

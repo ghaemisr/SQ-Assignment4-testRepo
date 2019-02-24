@@ -13,7 +13,7 @@ before_install:
 script: 
   - coverage run -a ./test/chessboardTest.py
   - coverage run -a ./test/gameLogicTest.py
-  - coverage run -a ./test/mainGameTest.py
+  - coverage run -a ./test/GUITest.py
   - coverage run -a ./test/scoreboardTest.py
 
 after_success:
