@@ -18,14 +18,13 @@ class Chessboard:
     def init_chessboard(self):
         self.currentPlayer = "Black"
         self.chessboardMatrix = []
-        aCol = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         for i in range(19):
+            aCol = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             self.chessboardMatrix.append(aCol)
 
     def get_current_player(self):
-        cp = self.currentPlayer
         self.currentPlayer = "White" if self.currentPlayer == "Black" else "Black"
-        return cp
+        return self.currentPlayer
 
     def move(self, x, y, player):
         if type(x) != int or type(y) != int:
