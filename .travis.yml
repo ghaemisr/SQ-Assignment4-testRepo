@@ -24,6 +24,7 @@ script:
   - coverage run -a ./test/GUITest.py
   - coverage run -a ./test/scoreboardTest.py
 
+
 after_success:
   - codecov
 
