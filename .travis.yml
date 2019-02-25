@@ -1,11 +1,11 @@
 language: python
-os: windows
 python: 
   - "3.6"
  
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - sudo apt-get -y install python3-pyqt5
   - pip install codecov
 
 before_install:
