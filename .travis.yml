@@ -22,3 +22,7 @@ script:
 after_success:
   - codecov
 
+addons:
+  apt:
+    packages:
+    - xvfb
